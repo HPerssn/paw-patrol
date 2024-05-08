@@ -1,0 +1,19 @@
+{
+  "name": "paw-patrol",
+  "version": "1.0.0",
+  "description": "Little web project to know when its suitable to walk the doggo!",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HPerssn/paw-patrol.git"
+  },
+  "author": "Henrik Persson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HPerssn/paw-patrol/issues"
+  },
+  "homepage": "https://github.com/HPerssn/paw-patrol#readme"
+}
