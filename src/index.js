@@ -1,8 +1,10 @@
-import config from "./config.js";
-
-const apiKey = config.apiKey;
+const config = require("./config.js");
 const apiUrl = config.apiUrl;
+const apiKey = config.apiKey;
 const axios = require("axios");
+function calculateAsphaltTemperature(airTemp, windspeed, constant) {
+  return airTemp + constant * Math.sqrt(windspeed);
+}
 
 axios
   .get(apiUrl, {
@@ -13,7 +15,12 @@ axios
   })
   .then((response) => {
     // Handle success
-    console.log("Weather data:", response.data);
+    const airTemp = response.data.current.temp_f;
+    const windspeed = response.data.current.wind_kph * 0.28;
+    const asphaltTemp =
+      (calculateAsphaltTemperature(airTemp, windspeed, 5) - 32) / 1.8;
+    console.log("Weather data:", airTemp, "fahrenheit", windspeed, "ms/s");
+    console.log("Asphalt temperature:", asphaltTemp, "celsius");
   })
   .catch((error) => {
     // Handle error

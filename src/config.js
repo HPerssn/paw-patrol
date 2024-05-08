@@ -1,6 +1,5 @@
 const config = {
-  apiKey: "YOURAPIKEYHERE",
+  apiKey: "YOURAPIKEY",
   apiUrl: "https://api.weatherapi.com/v1/current.json",
 };
-
-export default config;
+module.exports = config;
