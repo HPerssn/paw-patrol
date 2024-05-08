@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HPerssn/paw-patrol/issues"
   },
-  "homepage": "https://github.com/HPerssn/paw-patrol#readme"
+  "homepage": "https://github.com/HPerssn/paw-patrol#readme",
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
 }
