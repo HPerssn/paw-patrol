@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest tests",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/HPerssn/paw-patrol#readme",
   "dependencies": {
     "axios": "^1.6.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
