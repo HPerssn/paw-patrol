@@ -15,7 +15,7 @@ export function getWeather(lat, lon) {
       const airTemp = response.data.current.temp_f;
       const windspeed = response.data.current.wind_mph;
       const asphaltTemp = AsphaltTemperature(airTemp, windspeed, 0.2);
-      return Number(asphaltTemp);
+      return { asphaltTemp, airTemp: (airTemp - 32) / 1.8 };
     })
     .catch((error) => {
       console.error("Error fetching weather data:", error);
