@@ -16,11 +16,11 @@ axios
   .then((response) => {
     // Handle success
     const airTemp = response.data.current.temp_f;
-    const windspeed = response.data.current.wind_kph * 0.28;
+    const windspeed = response.data.current.wind_mph;
     const asphaltTemp =
-      (calculateAsphaltTemperature(airTemp, windspeed, 5) - 32) / 1.8;
-    console.log("Weather data:", airTemp, "fahrenheit", windspeed, "ms/s");
-    console.log("Asphalt temperature:", asphaltTemp, "celsius");
+      (calculateAsphaltTemperature(airTemp, windspeed, 0.2) - 32) / 1.8;
+    console.log("Weather data:", airTemp, "fahrenheit", windspeed, "mph");
+    console.log("Asphalt temperature:", asphaltTemp.toFixed(2), "celsius");
   })
   .catch((error) => {
     // Handle error
