@@ -1,6 +1,5 @@
 const config = {
-  apiKey: "c173a68ed376492b8aa81558240805",
-  apiUrl: "https://api.weatherapi.com/v1/current.json",
+  apiUrl: "https://api.open-meteo.com/v1/forecast",
 };
 
 module.exports = config;

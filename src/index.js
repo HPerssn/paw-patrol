@@ -5,8 +5,9 @@ document.getElementById("getWeather").addEventListener("click", function () {
   getLocation().then((position) => {
     getWeather(position.latitude, position.longitude)
       .then((temperatures) => {
+        const airTempCelsius = (temperatures.airTemp - 32) * (5 / 9);
         document.getElementById("air").innerHTML =
-          temperatures.airTemp.toFixed(2) + "°C";
+          airTempCelsius.toFixed(2) + "°C";
         document.getElementById("ground").innerHTML =
           temperatures.asphaltTemp.toFixed(2) + "°C";
       })
