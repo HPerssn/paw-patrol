@@ -1,3 +1,3 @@
-export function AsphaltTemperature(airTemp, windspeed, constant) {
-  return (airTemp + constant * Math.sqrt(windspeed) - 32) / 1.8;
+export function AsphaltTemperature(airTemp) {
+  return airTemp + 30 - 30 * 1.8;
 }
