@@ -1,15 +1,15 @@
 import { gsap } from "gsap";
 
 export function animateTemperature(airTemperature, groundTemperature) {
-  // Objects to be tweened
+  // Objekt som animeras
   let airObj = { val: 0 };
   let groundObj = { val: 0 };
 
-  // Elements to display the values
+  // kopplar samman med ID
   let airElement = document.getElementById("air");
   let groundElement = document.getElementById("ground");
 
-  // Animate air temperature
+  // Animerar luften
   gsap.to(airObj, {
     val: airTemperature,
     duration: 2,
@@ -18,7 +18,7 @@ export function animateTemperature(airTemperature, groundTemperature) {
     },
   });
 
-  // Animate ground temperature
+  // Animerar Marktemp
   gsap.to(groundObj, {
     val: groundTemperature,
     duration: 2,
