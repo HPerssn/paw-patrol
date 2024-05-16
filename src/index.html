@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles2.css" />
     <title>Paw patrol</title>
   </head>
   <body>
@@ -15,13 +15,29 @@
         <a href="Github.html">Github</a>
       </div>
     </nav>
-    <p>Click the button to get the pavement temperature</p>
-    <button id="getWeather">Get pavement temp</button>
-    <div id="weather">
-      <h2>Weather</h2>
-      <p>Air Temperature: <span id="air"></span></p>
-      <p>Ground Temperature: <span id="ground"></span></p>
+    <div id="loader">
+      <img src="public/tax.png" alt="dachshund loader" id="loading-image" />
     </div>
+    <main>
+      <div id="about">
+        <h2>About</h2>
+        <p>
+          This is a simple app that uses the OpenWeather API to get the current
+          weather in a city. It also uses the OpenWeather One Call API to get
+          the current weather and the forecast for the next 7 days. The app also
+          uses the OpenWeather API to get the current weather in a city. It also
+          uses the OpenWeather One Call API to get the current weather and the
+          forecast for the next 7 days.
+        </p>
+      </div>
+
+      <div id="weather">
+        <h2>Asphalt temperature</h2>
+        <button id="getWeather">Get pavement temp</button>
+        <p>Air Temperature: <span id="air"></span></p>
+        <p>Ground Temperature: <span id="ground"></span></p>
+      </div>
+    </main>
     <script type="module" src="../dist/bundle.js"></script>
   </body>
 </html>
