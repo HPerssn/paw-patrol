@@ -1,0 +1,78 @@
+:root {
+  --main-bg-color: #f4f4f4;
+  --main-text-color: #333;
+  --function-color: #007bff;
+  --alt-bg-color: #333;
+  --alt-text-color: #fff;
+  --alt-function-color: #0056b3;
+  --main-padding: 10px 0 10px 0;
+  --main-font-size: 1.1rem;
+  --large-font-size: 2.4rem;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+main {
+  margin: 100px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 60%;
+}
+
+h1 {
+  color: var(--main-text-color);
+  text-align: center;
+  padding: var(--main-padding);
+  font-size: var(--large-font-size);
+}
+
+p {
+  padding: var(--main-padding);
+  margin-left: 2%;
+  font-size: var(--main-font-size);
+}
+
+button {
+  padding: var(--main-padding);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: var(--main-font-size);
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#container {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  width: 50%;
+}
+
+#weather {
+  height: 0;
+  margin-top: 20px;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+  background-color: var(--function-color);
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #container {
+    width: 100%;
+    justify-content: center;
+  }
+}
