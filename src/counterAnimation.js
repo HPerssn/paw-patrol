@@ -15,6 +15,21 @@ export function animateTemperature(airTemperature, groundTemperature) {
     duration: 2,
     onUpdate: function () {
       airElement.textContent = airObj.val.toFixed(2);
+      if (airObj.val > 27) {
+        gsap.to(airElement, {
+          backgroundColor: "red",
+
+          duration: 0.5,
+          ease: "elastic.in",
+        });
+      } else if (airObj.val > 20) {
+        gsap.to(airElement, {
+          backgroundColor: "yellow",
+
+          duration: 0.5,
+          ease: "elastic.in",
+        });
+      }
     },
   });
 
@@ -24,6 +39,21 @@ export function animateTemperature(airTemperature, groundTemperature) {
     duration: 2,
     onUpdate: function () {
       groundElement.textContent = groundObj.val.toFixed(2) + "°C";
+      if (groundObj.val > 35) {
+        gsap.to(groundElement, {
+          backgroundColor: "red",
+
+          duration: 0.5,
+          ease: "elastic.in",
+        });
+      } else if (groundObj.val > 20) {
+        gsap.to(groundElement, {
+          backgroundColor: "yellow",
+
+          duration: 0.5,
+          ease: "elastic.in",
+        });
+      }
     },
   });
 }

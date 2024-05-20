@@ -1,10 +1,14 @@
 import { getLocation } from "./location.js";
 import { getWeather } from "./weather.js";
 import { animateTemperature } from "./counterAnimation.js";
-import { loader } from "./loader.js";
+import { dropdown } from "./dropdown.js";
+import { AnimateButton } from "./animateButton.js";
+
+AnimateButton();
 
 document.getElementById("getWeather").addEventListener("click", function () {
   getLocation().then((position) => {
+    dropdown();
     getWeather(position.latitude, position.longitude)
       .then((temperatures) => {
         let asphaltTemp = temperatures.asphaltTemp;
@@ -18,5 +22,3 @@ document.getElementById("getWeather").addEventListener("click", function () {
       });
   });
 });
-
-window.onload = loader();
