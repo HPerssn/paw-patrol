@@ -1,6 +1,6 @@
 import axios from "axios";
-import { AsphaltTemperature } from "./asphalt.js";
-import { apiUrl } from "./config.js";
+import { AsphaltTemperature } from "./components/asphalt.js";
+import { apiUrl } from "./components/config.js";
 
 export function getWeather(lat, lon) {
   return axios

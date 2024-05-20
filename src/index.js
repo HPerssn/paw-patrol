@@ -1,8 +1,8 @@
-import { getLocation } from "./location.js";
-import { getWeather } from "./weather.js";
-import { animateTemperature } from "./counterAnimation.js";
-import { dropdown } from "./dropdown.js";
-import { AnimateButton } from "./animateButton.js";
+import { getLocation } from "./components/location.js";
+import { getWeather } from "./components/weather.js";
+import { animateTemperature } from "./components/counterAnimation.js";
+import { dropdown } from "./components/dropdown.js";
+import { AnimateButton } from "./components/animateButton.js";
 
 AnimateButton();
 

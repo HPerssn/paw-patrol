@@ -6,7 +6,7 @@
   --alt-text-color: #fff;
   --alt-function-color: #0056b3;
   --main-padding: 10px 0 10px 0;
-  --main-font-size: 1.6rem;
+  --main-font-size: 1.1rem;
   --large-font-size: 2.4rem;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 main {
-  margin: 200px auto;
+  margin: 100px auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -58,9 +58,11 @@ button {
 
 #weather {
   height: 0;
+  margin-top: 20px;
   overflow: hidden;
   transition: height 0.3s ease-out;
   background-color: var(--function-color);
+  border-radius: 5px;
 }
 
 @media (max-width: 600px) {
@@ -71,5 +73,6 @@ button {
 
   #container {
     width: 100%;
+    justify-content: center;
   }
 }
