@@ -12,9 +12,10 @@ document.getElementById("getWeather").addEventListener("click", function () {
     getWeather(position.latitude, position.longitude)
       .then((temperatures) => {
         let asphaltTemp = temperatures.asphaltTemp;
-        if (position.hours < 7 || position.hours > 18) {
+        if (position.hours < 11 || position.hours > 15) {
           asphaltTemp -= 5; // minskar temp vid morgon och kväll
         }
+
         animateTemperature(temperatures.airTempCelcius, asphaltTemp);
       })
       .catch((error) => {
