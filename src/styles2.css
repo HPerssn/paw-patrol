@@ -1,9 +1,9 @@
 :root {
-  --main-bg-color: #f4f4f4;
-  --main-text-color: #333;
-  --function-color: #007bff;
-  --alt-bg-color: #333;
-  --alt-text-color: #fff;
+  --main-bg-color: #f9a620;
+  --main-text-color: #1191923;
+  --function-color: #00af54;
+  --alt-bg-color: #191923;
+  --alt-text-color: #e9f1f7;
   --alt-function-color: #0056b3;
   --main-padding: 10px 0 10px 0;
   --main-font-size: 1.2rem;
@@ -39,6 +39,7 @@ p {
 }
 
 button {
+  background-color: var(--function-color);
   padding: var(--main-padding);
   margin-top: 10px;
   margin-bottom: 10px;
@@ -63,6 +64,7 @@ button {
   transition: height 0.3s ease-out;
   background-color: var(--function-color);
   border-radius: 5px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
