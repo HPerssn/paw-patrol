@@ -1,10 +1,11 @@
 :root {
-  --main-bg-color: #f9a620;
-  --main-text-color: #1191923;
-  --function-color: #00af54;
-  --alt-bg-color: #191923;
-  --alt-text-color: #e9f1f7;
-  --alt-function-color: #0056b3;
+  --main-bg-color: #ebebd3;
+  --main-text-color: #1a281f;
+  --function-color: #e57a44;
+  --alt-bg-color: #1a281f;
+  --alt-text-color: #ebebd3;
+  --alt-function-color: #67597a;
+
   --main-padding: 10px 0 10px 0;
   --main-font-size: 1.2rem;
   --large-font-size: 2.4rem;
@@ -15,6 +16,8 @@ body {
   font-size: 1.5rem;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
+  background-image: url("../public/tax.png");
+  background-repeat: repeat;
 }
 
 main {
@@ -40,6 +43,7 @@ p {
 
 button {
   background-color: var(--function-color);
+  color: var(--main-text-color);
   padding: var(--main-padding);
   margin-top: 10px;
   margin-bottom: 10px;
@@ -47,6 +51,7 @@ button {
   display: inline-block;
   cursor: pointer;
   border-radius: 5px;
+  border: 1px solid var(--main-text-color);
 }
 
 #container {
@@ -63,6 +68,7 @@ button {
   overflow: hidden;
   transition: height 0.3s ease-out;
   background-color: var(--function-color);
+  color: var(--main-text-color);
   border-radius: 5px;
   text-align: center;
 }
