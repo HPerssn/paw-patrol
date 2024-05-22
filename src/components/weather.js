@@ -13,10 +13,12 @@ export function getWeather(lat, lon) {
       },
     })
     .then((response) => {
+      let hours = location.hours;
       let cloud_cover = response.data.current.cloud_cover;
+      let humidity = response.data.current.relative_humidity_2m;
       let airTemp = response.data.current.temperature_2m;
       let airTempCelcius = (airTemp - 32) * (5 / 9);
-      let asphaltTemp = AsphaltTemperature(airTemp);
+      let asphaltTemp = AsphaltTemperature(airTemp, hours, humidity);
       console.log(airTempCelcius, asphaltTemp, cloud_cover);
       return { asphaltTemp, airTempCelcius, cloud_cover };
     })
