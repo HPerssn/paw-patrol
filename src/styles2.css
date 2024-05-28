@@ -1,23 +1,19 @@
 :root {
-  --main-bg-color: #ebebd3;
-  --main-text-color: #1a281f;
-  --function-color: #e57a44;
+  --main-bg-color: 240, 250, 238;
+  --main-text-color: 16, 73, 127;
+  --function-color: 245, 245, 235;
   --alt-bg-color: #1a281f;
   --alt-text-color: #ebebd3;
-  --alt-function-color: #67597a;
-
   --main-padding: 10px 0 10px 0;
-  --main-font-size: 1.2rem;
+  --main-font-size: 1.5rem;
   --large-font-size: 2.4rem;
 }
 
 body {
   font-family: Roboto, sans-serif;
-  font-size: 1.5rem;
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  background-image: url("../public/tax.png");
-  background-repeat: repeat;
+  font-size: var(--main-font-size);
+  background-color: rgb(var(--main-bg-color));
+  color: rgb(var(--main-text-color));
 }
 
 main {
@@ -29,7 +25,6 @@ main {
 }
 
 h1 {
-  color: var(--main-text-color);
   text-align: center;
   padding: var(--main-padding);
   font-size: var(--large-font-size);
@@ -41,9 +36,12 @@ p {
   font-size: var(--main-font-size);
 }
 
-button {
-  background-color: var(--function-color);
-  color: var(--main-text-color);
+#getWeather {
+  background: rgba(var(--function-color), 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(var(--main-text-color), 0.3);
+  color: rgb(var(--main-text-color));
   padding: var(--main-padding);
   margin-top: 10px;
   margin-bottom: 10px;
@@ -51,7 +49,6 @@ button {
   display: inline-block;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid var(--main-text-color);
 }
 
 #container {
@@ -63,12 +60,14 @@ button {
 }
 
 #weather {
+  background: rgba(var(--function-color), 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   height: 0;
   margin-top: 20px;
   overflow: hidden;
   transition: height 0.3s ease-out;
-  background-color: var(--function-color);
-  color: var(--main-text-color);
+  color: rgb(var(--main-text-color));
   border-radius: 5px;
   text-align: center;
 }
