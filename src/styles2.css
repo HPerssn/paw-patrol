@@ -21,7 +21,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  width: 60%;
+  width: 70%;
 }
 
 h1 {
@@ -59,6 +59,10 @@ p {
   width: 50%;
 }
 
+#interpretation {
+  text-align: center;
+}
+
 #weather {
   background: rgba(var(--function-color), 0.4);
   backdrop-filter: blur(10px);
@@ -70,9 +74,10 @@ p {
   color: rgb(var(--main-text-color));
   border-radius: 5px;
   text-align: center;
+  padding-bottom: 25px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 840px) {
   main {
     width: 100%;
     margin: 0 auto;

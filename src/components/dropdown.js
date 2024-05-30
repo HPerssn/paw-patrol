@@ -5,7 +5,7 @@ export function dropdown() {
     height: "auto",
     boxShadow: "0px 0px 20px rgba(0,0,0,0.2)",
     duration: 1,
-    ease: "power2.inOut",
+    ease: "power2.Out",
     onComplete: function () {
       document.getElementById("weather").style.height = "auto";
     },

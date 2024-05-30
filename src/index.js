@@ -3,6 +3,7 @@ import { getWeather } from "./components/weather.js";
 import { animateTemperature } from "./components/counterAnimation.js";
 import { dropdown } from "./components/dropdown.js";
 import { AnimateButton } from "./components/animateButton.js";
+import { resultText } from "./components/resultText.js";
 
 AnimateButton();
 
@@ -13,6 +14,7 @@ document.getElementById("getWeather").addEventListener("click", function () {
       .then((temperatures) => {
         let asphaltTemp = temperatures.asphaltTemp;
         animateTemperature(temperatures.airTempCelcius, asphaltTemp);
+        resultText(temperatures.airTempCelcius, asphaltTemp);
       })
       .catch((error) => {
         console.error("Error getting weather data:", error);
