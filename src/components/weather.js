@@ -18,8 +18,16 @@ export function getWeather(lat, lon) {
       let humidity = response.data.current.relative_humidity_2m;
       let airTemp = response.data.current.temperature_2m;
       let airTempCelcius = (airTemp - 32) * (5 / 9);
-      let asphaltTemp = AsphaltTemperature(airTemp, hours, humidity);
+      let asphaltTemp = AsphaltTemperature(
+        airTemp,
+        hours,
+        humidity,
+        cloud_cover
+      );
       console.log(airTempCelcius, asphaltTemp, cloud_cover);
+      if (humidity > 70) {
+        airTempCelcius += 3;
+      }
       return { asphaltTemp, airTempCelcius, cloud_cover };
     })
     .catch((error) => {

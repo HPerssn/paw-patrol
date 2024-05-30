@@ -7,9 +7,7 @@ export function AsphaltTemperature(airTemp, hours, humidity, cloud_cover) {
   if (cloud_cover > 30) {
     asphaltTemp -= 8;
   }
-  if (humidity > 70) {
-    asphaltTemp += 3;
-  }
+
   console.log(asphaltTemp);
   return asphaltTemp;
 }
