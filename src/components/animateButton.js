@@ -10,6 +10,11 @@ export function AnimateButton() {
       duration: 0.5,
       ease: "power2.out",
     });
+    gsap.to(buttonText, {
+      text: "Fetch Temperature!",
+      duration: 0.5,
+      ease: "power2.out",
+    });
   });
 
   button.addEventListener("mouseout", function () {
@@ -17,6 +22,11 @@ export function AnimateButton() {
       scaleX: 1,
       scaleY: 1,
       boxShadow: "0px 0px 0px rgba(0,0,0,0)",
+      duration: 0.5,
+      ease: "power2.out",
+    });
+    gsap.to(buttonText, {
+      text: "Is it walk time?",
       duration: 0.5,
       ease: "power2.out",
     });

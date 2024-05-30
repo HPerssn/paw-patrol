@@ -22,7 +22,7 @@ export function animateTemperature(airTemperature, groundTemperature) {
           duration: 0.5,
           ease: "elastic.in",
         });
-      } else if (airObj.val > 20) {
+      } else if (airObj.val > 22) {
         gsap.to(airElement, {
           backgroundColor: "yellow",
 
