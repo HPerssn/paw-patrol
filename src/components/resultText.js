@@ -15,12 +15,12 @@ export function resultText(air, ground) {
   } else {
     airTempInterpretation = "It's nice and chill!";
   }
-
   let text;
   if (ground > 40) {
     text = `Ouch! The pavement is burning hot. Not safe for your dog's paws. ${airTempInterpretation}`;
   } else if (ground > 35) {
     text = `The pavement is hot. Be cautious with your dog's paws. ${airTempInterpretation}`;
+
   } else if (ground > 30) {
     text = `The pavement is warm but still safe for your dog's stroll. ${airTempInterpretation}`;
   } else {
