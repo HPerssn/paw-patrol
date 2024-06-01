@@ -15,7 +15,7 @@ export function animateTemperature(airTemperature, groundTemperature) {
     duration: 2,
     onUpdate: function () {
       airElement.textContent = airObj.val.toFixed(2);
-      if (airObj.val > 27) {
+      if (airObj.val > 25) {
         gsap.to(airElement, {
           backgroundColor: "red",
 
@@ -42,6 +42,12 @@ export function animateTemperature(airTemperature, groundTemperature) {
       if (groundObj.val > 40) {
         gsap.to(groundElement, {
           backgroundColor: "red",
+          duration: 0.5,
+          ease: "elastic.in",
+        });
+      } else if (groundObj.val > 35) {
+        gsap.to(groundElement, {
+          backgroundColor: "orange",
           duration: 0.5,
           ease: "elastic.in",
         });
