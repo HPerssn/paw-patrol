@@ -1,4 +1,4 @@
-import { animateTemperature } from "./components/counterAnimation.js";
+import "../src/styles2.css";
 import { getLocation } from "./components/location.js";
 document.getElementById("getWeather").addEventListener("click", function () {
   import("./components/animateButton.js").then(({ AnimateButton }) => {
