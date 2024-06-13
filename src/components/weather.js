@@ -8,16 +8,27 @@ export function getWeather(lat, lon) {
       params: {
         latitude: lat,
         longitude: lon,
-        current: "temperature_2m",
+        current: ["temperature_2m", "cloud_cover", "relative_humidity_2m"],
         temperature_unit: "fahrenheit",
       },
     })
     .then((response) => {
+      let hours = location.hours;
+      let cloud_cover = response.data.current.cloud_cover;
+      let humidity = response.data.current.relative_humidity_2m;
       let airTemp = response.data.current.temperature_2m;
       let airTempCelcius = (airTemp - 32) * (5 / 9);
-      let asphaltTemp = AsphaltTemperature(airTemp);
-      console.log(airTempCelcius, asphaltTemp);
-      return { asphaltTemp, airTempCelcius };
+      let asphaltTemp = AsphaltTemperature(
+        airTemp,
+        hours,
+        humidity,
+        cloud_cover
+      );
+      console.log(airTempCelcius, asphaltTemp, cloud_cover);
+      if (humidity > 70) {
+        airTempCelcius += 3;
+      }
+      return { asphaltTemp, airTempCelcius, cloud_cover };
     })
     .catch((error) => {
       console.error("Error fetching weather data:", error);

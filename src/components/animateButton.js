@@ -7,7 +7,11 @@ export function AnimateButton() {
       scaleX: 0.9,
       scaleY: 1.1,
       boxShadow: "10px 10px 20px rgba(0,0,0,0.2)",
-      border: "1px solid black",
+      duration: 0.5,
+      ease: "power2.out",
+    });
+    gsap.to(buttonText, {
+      text: "Fetch Temperature!",
       duration: 0.5,
       ease: "power2.out",
     });
@@ -18,7 +22,11 @@ export function AnimateButton() {
       scaleX: 1,
       scaleY: 1,
       boxShadow: "0px 0px 0px rgba(0,0,0,0)",
-      border: "none",
+      duration: 0.5,
+      ease: "power2.out",
+    });
+    gsap.to(buttonText, {
+      text: "Is it walk time?",
       duration: 0.5,
       ease: "power2.out",
     });
@@ -27,9 +35,8 @@ export function AnimateButton() {
   button.addEventListener("mousedown", function () {
     gsap.to(button, {
       scaleX: 0.9,
-      scaleY: 1.1,
+      y: "4px",
       boxShadow: "10px 10px 20px rgba(0,0,0,0.2)",
-      border: "1px solid black",
       duration: 0.5,
       ease: "power2.out",
     });
@@ -39,8 +46,8 @@ export function AnimateButton() {
     gsap.to(button, {
       scaleX: 1,
       scaleY: 1,
+      y: "0px",
       boxShadow: "0px 0px 0px rgba(0,0,0,0)",
-      border: "none",
       duration: 0.5,
       ease: "power2.out",
     });
