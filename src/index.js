@@ -1,3 +1,4 @@
+import { animateTemperature } from "./components/counterAnimation.js";
 import { getLocation } from "./components/location.js";
 document.getElementById("getWeather").addEventListener("click", function () {
   import("./components/animateButton.js").then(({ AnimateButton }) => {
@@ -18,12 +19,13 @@ document.getElementById("getWeather").addEventListener("click", function () {
         if (position.hours < 11 || position.hours > 15) {
           asphaltTemp -= 5; // minskar temp vid morgon och kväll
         }
-        import("./components/counterAnimation.js","./components/resultText.js").then(
-          ({ animateTemperature }) => {
-            animateTemperature(temperatures.airTempCelcius, asphaltTemp);
-            resultText(temperatures.airTempCelcius, asphaltTemp);
-          }
-        );
+        Promise.all([
+          import("./components/counterAnimation.js"),
+          import("./components/resultText.js"),
+        ]).then(([{ animateTemperature }, { resultText }]) => {
+          animateTemperature(temperatures.airTempCelcius, asphaltTemp);
+          resultText(temperatures.airTempCelcius, asphaltTemp);
+        });
       })
       .catch((error) => {
         console.error("Error getting weather data:", error);
