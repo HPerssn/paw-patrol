@@ -9,7 +9,7 @@ module.exports = {
   mode: "production",
   devServer: {
     contentBase: path.join(__dirname, "src"),
-    publicPath: "/src/",
+    publicPath: "/",
     port: 5500,
   },
 };
