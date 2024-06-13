@@ -12,7 +12,7 @@ Little web project to know when its suitable to walk the doggo!
 - Run `npm install` to install all the dependencies
 - Run `npm run build` to Build the project
 - Run `npm run start` to start the project
-- Open `localhost/5500/src` in your browser.
+- Open [localhost:5500](http://localhost:5500/) in your browser.
 - Enjoy!
 OR!
 Access the deployed version here: [coolpaws.netlify.app](https://coolpaws.netlify.app/)
