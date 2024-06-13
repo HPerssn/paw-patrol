@@ -14,6 +14,8 @@ Little web project to know when its suitable to walk the doggo!
 - Run `npm run start` to start the project
 - Open `localhost/5500/src` in your browser.
 - Enjoy!
+OR!
+Access the deployed version here: [coolpaws.netlify.app](https://coolpaws.netlify.app/)
 
 ## Authors
 
