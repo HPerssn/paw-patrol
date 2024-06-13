@@ -9,6 +9,7 @@ Little web project to know when its suitable to walk the doggo!
 
 ## Running the project
 
+- Run `npm install` to install all the dependencies
 - Run `npm run build` to Build the project
 - Run `npm run start` to start the project
 - Open `localhost/5500/src` in your browser.
