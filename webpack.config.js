@@ -7,12 +7,13 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
-  mode: "production",
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
   devServer: {
-    contentBase: path.join(__dirname, "src"),
-    publicPath: "/",
+    static: path.join(__dirname, "src"),
     port: 5500,
+    hot: true,
   },
   module: {
     rules: [

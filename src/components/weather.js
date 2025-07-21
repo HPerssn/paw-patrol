@@ -24,7 +24,7 @@ export function getWeather(lat, lon) {
         humidity,
         cloud_cover
       );
-      console.log(airTempCelcius, asphaltTemp, cloud_cover);
+      //console.log(airTempCelcius, asphaltTemp, cloud_cover);
       if (humidity > 70) {
         airTempCelcius += 3;
       }

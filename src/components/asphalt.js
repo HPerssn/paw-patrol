@@ -8,6 +8,6 @@ export function AsphaltTemperature(airTemp, hours, humidity, cloud_cover) {
     asphaltTemp -= 8;
   }
 
-  console.log(asphaltTemp);
+  //console.log(asphaltTemp);
   return asphaltTemp;
 }
